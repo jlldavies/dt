@@ -15,8 +15,8 @@ _EXTENSION_MAP: dict[str, str] = {
     ".yaml": "yaml",
     ".yml": "yaml",
     ".xml": "xml",
-    ".xlsx": "xlsx",
-    ".xls": "xls",
+    ".xlsx": "excel",
+    ".xls": "excel",
 }
 
 

@@ -21,8 +21,8 @@ class TestDetectFromExtension:
             ("data.yaml", "yaml"),
             ("data.yml", "yaml"),
             ("data.xml", "xml"),
-            ("data.xlsx", "xlsx"),
-            ("data.xls", "xls"),
+            ("data.xlsx", "excel"),
+            ("data.xls", "excel"),
         ],
     )
     def test_known_extensions(self, filename: str, expected: str) -> None:
