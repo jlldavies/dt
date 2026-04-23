@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<data>
+  <row><name>Alice</name><age>30</age><city>New York</city></row>
+  <row><name>Bob</name><age>25</age><city>London</city></row>
+  <row><name>Charlie</name><age>35</age><city>Paris</city></row>
+</data>
