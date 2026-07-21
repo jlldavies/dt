@@ -79,9 +79,9 @@ Pipeline stages live in `src/dt/`, wired together by the CLI:
   `from __future__ import annotations` and uses type hints.
 - stdout is reserved for data output; all human-facing messages go to stderr (the CLI's
   `Console(stderr=True)`), so `dt` stays safe in pipes.
-- New formats are added as a `*_handler.py` registered via the `formats/registry.py`
+- New formats are added as a `*_handler.py` registered via the `src/dt/formats/registry.py`
   decorator, then imported in `cli.py` so the decorator runs.
-- New LLM backends implement the `llm/base.py` interface.
+- New LLM backends implement the `src/dt/llm/base.py` interface.
 - Store classes (`CodeCache`, `AliasStore`) accept an explicit path/dir argument so tests can
   point them at temp locations instead of the real user directories.
 
@@ -92,8 +92,8 @@ Pipeline stages live in `src/dt/`, wired together by the CLI:
   it is unset. API keys are read from the environment only and never stored by the tool.
 - The Ollama backend needs no API key; it talks to `OLLAMA_HOST` (default
   `http://localhost:11434`) and a locally pulled model.
-- Aliases persist to `platformdirs` user-config dir (`.../dt/aliases.json`); the code cache
-  persists to the `platformdirs` user-cache dir (`.../dt/code_cache`). Both live outside the
+- Aliases persist to the `platformdirs` user-config dir (as `aliases.json`); the code cache
+  persists to the `platformdirs` user-cache dir (as `code_cache`). Both live outside the
   repo.
 - Runtime dependencies (typer, rich, polars, pyyaml, lxml, openpyxl, fastexcel, anthropic,
   ollama, diskcache, platformdirs) install via `pip install -e .`.
@@ -123,3 +123,7 @@ Pipeline stages live in `src/dt/`, wired together by the CLI:
   locale or POSIX-only paths.
 - A `.claude/` directory (including any leftover agent worktrees) is gitignored - do not
   reference or commit anything under it.
+
+## MCP servers
+
+None - this repo defines no project-scoped MCP servers (no `.mcp.json`).
