@@ -10,3 +10,5 @@ build/
 htmlcov/
 *.xlsx.tmp
 .dt_cache/
+
+.claude/
