@@ -12,3 +12,6 @@ htmlcov/
 .dt_cache/
 
 .claude/
+
+# Local/personal agent context — not for the public repo
+/CLAUDE.md
